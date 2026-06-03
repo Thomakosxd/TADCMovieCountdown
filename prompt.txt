@@ -1,0 +1,111 @@
+Create a complete modern website about "The Amazing Digital Circus" movie release.
+
+Requirements:
+
+- Generate exactly 3 files:
+  - index.html
+  - styles.css
+  - main.js
+
+- Do not include any comments in any code.
+- Use clean, production-ready code.
+- Use responsive design for desktop, tablet, and mobile.
+- Use only HTML, CSS, and vanilla JavaScript.
+
+Website concept:
+Build a premium countdown website themed around The Amazing Digital Circus. The visual style should match the colorful, surreal, circus-inspired aesthetic of the series. The website should feel like an official fan event page.
+
+Data collection:
+- Research the latest available information about The Amazing Digital Circus movie (the final TADC episode presented as a movie/event if applicable).
+- Find release dates, premiere dates, screenings, cinemas, cities, countries, and time zones.
+- Use real data whenever available.
+- If some locations are not officially announced, clearly label them as estimated or upcoming.
+
+Content requirements:
+- Display a global release tracker.
+- Show countries where the movie/event will be released.
+- Show cities and cinemas for each country whenever available.
+- Group cinemas under their respective cities and countries.
+- Automatically calculate countdowns using the visitor's local time.
+
+Countdown system:
+- Global countdown to the earliest release.
+- Separate countdown cards for every country.
+- Separate countdown cards for every city.
+- Separate countdown cards for every cinema.
+- Countdowns must display:
+  - Days
+  - Hours
+  - Minutes
+  - Seconds
+- Update in real time every second.
+- When a release time has passed, display "Now Showing".
+
+Design requirements:
+- Inspired by The Amazing Digital Circus.
+- Bright neon colors.
+- Circus and carnival atmosphere.
+- Glassmorphism effects.
+- Animated gradients.
+- Floating particles.
+- Smooth transitions and hover effects.
+- Custom loading screen.
+- Animated countdown cards.
+- Character-themed sections.
+
+Images:
+- Find and use high-quality images of:
+  - Pomni
+  - Jax
+  - Ragatha
+  - Caine
+  - Kinger
+  - Zooble
+  - Gangle
+  - Bubble
+- Create a hero section with character artwork.
+- Create a gallery section.
+- Optimize image loading.
+
+Page sections:
+1. Hero section
+2. Main global countdown
+3. Character showcase
+4. Worldwide release map
+5. Countries release section
+6. Cities release section
+7. Cinemas release section
+8. Gallery
+9. FAQ
+10. Footer
+
+Interactive features:
+- Search countries.
+- Search cities.
+- Filter by release status.
+- Sort releases by nearest countdown.
+- Animated statistics.
+- Progress bars showing time remaining.
+- Expand/collapse cinema lists.
+- Back-to-top button.
+
+Technical requirements:
+- Store release data in JavaScript objects.
+- Detect and convert time zones automatically.
+- Use Intl.DateTimeFormat and modern browser APIs.
+- Handle daylight saving time correctly.
+- No external frameworks.
+- Use semantic HTML.
+- Optimize performance.
+- Accessibility friendly.
+
+Visual extras:
+- Confetti effect when a countdown reaches zero.
+- Character cards with hover animations.
+- Animated background inspired by the Digital Circus tent.
+- Parallax effects.
+- Neon glowing buttons.
+- Custom cursor matching the TADC theme.
+
+Output:
+Provide the complete contents of index.html, styles.css, and main.js in separate code blocks. Ensure everything works immediately after saving the files in the same folder.

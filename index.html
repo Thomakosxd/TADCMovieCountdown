@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Amazing Digital Circus: The Last Act — In Theaters June 4</title>
+  <meta name="description" content="The Amazing Digital Circus: The Last Act — The grand finale comes to theaters worldwide June 4–18, 2026. Global countdown, worldwide release tracker, and more." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Fredoka+One&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div id="loader" role="status" aria-label="Loading">
+    <div class="loader-tent">
+      <div class="loader-stripes"></div>
+    </div>
+    <div class="loader-logo">
+      <span class="loader-title">The Amazing Digital Circus</span>
+      <span class="loader-sub">THE LAST ACT</span>
+    </div>
+    <div class="loader-dots">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+
+  <div id="cursor" aria-hidden="true"></div>
+  <div id="cursor-trail" aria-hidden="true"></div>
+
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+  <div id="confetti-container" aria-hidden="true"></div>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <div class="nav-logo">
+        <span class="nav-logo-text">TADC</span>
+        <span class="nav-logo-sub">THE LAST ACT</span>
+      </div>
+      <ul class="nav-links" role="list">
+        <li><a href="#countdown">Countdown</a></li>
+        <li><a href="#characters">Cast</a></li>
+        <li><a href="#releases">Releases</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <a href="https://www.digitalcircus.movie/" target="_blank" rel="noopener noreferrer" class="btn btn-neon nav-cta">Get Tickets</a>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <section class="hero" aria-label="Hero section">
+      <div class="hero-bg-layers" aria-hidden="true">
+        <div class="hero-tent-top"></div>
+        <div class="hero-gradient-ring hero-ring-1"></div>
+        <div class="hero-gradient-ring hero-ring-2"></div>
+        <div class="hero-gradient-ring hero-ring-3"></div>
+      </div>
+
+      <div class="hero-characters" aria-hidden="true">
+        <div class="hero-char hero-char-pomni">
+          <img src="images/Pomni.webp" alt="Pomni character art" loading="eager" onerror="this.style.display='none'" />
+        </div>
+        <div class="hero-char hero-char-jax">
+          <img src="images/Jax.webp" alt="Jax character art" loading="eager" onerror="this.style.display='none'" />
+        </div>
+        <div class="hero-char hero-char-caine">
+          <img src="images/Caine.webp" alt="Caine character art" loading="eager" onerror="this.style.display='none'" />
+        </div>
+        <div class="hero-char hero-char-ragatha">
+          <img src="images/Ragatha.webp" alt="Ragatha character art" loading="eager" onerror="this.style.display='none'" />
+        </div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <span class="hero-badge">NOW IN THEATERS</span>
+        </div>
+        <h1 class="hero-title">
+          <span class="hero-title-main">The Amazing</span>
+          <span class="hero-title-accent">Digital Circus</span>
+          <span class="hero-title-sub">THE LAST ACT</span>
+        </h1>
+        <p class="hero-desc">The viral internet phenomenon comes to its mind-bending conclusion in a feature-length theatrical event. Episode 8 + the all-new, hour-long Episode 9 — in theaters before anyone else in the world.</p>
+        <div class="hero-dates">
+          <div class="hero-date-pill">
+            <span class="pill-label">Theaters</span>
+            <span class="pill-value">Jun 4–18, 2026</span>
+          </div>
+          <div class="hero-date-pill">
+            <span class="pill-label">YouTube & Netflix</span>
+            <span class="pill-value">Jun 19, 2026</span>
+          </div>
+        </div>
+        <div class="hero-ctas">
+          <a href="https://www.fathomentertainment.com/releases/the-amazing-digital-circus/" target="_blank" rel="noopener noreferrer" class="btn btn-neon btn-xl">🎟️ Get Tickets</a>
+          <a href="#releases" class="btn btn-ghost btn-xl">🌍 Find Your Country</a>
+        </div>
+        <div class="hero-stats" aria-label="Series statistics">
+          <div class="stat-item" data-target="1000000000" data-suffix="+" data-prefix="">
+            <span class="stat-num" data-count="1000000000">0</span>
+            <span class="stat-label">Online Views</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">2,000+</span>
+            <span class="stat-label">US Theaters</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num" data-count="40" data-suffix="+">0</span>
+            <span class="stat-label">Countries</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">$7.5M+</span>
+            <span class="stat-label">Presale Record</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <section class="section-countdown" id="countdown" aria-labelledby="countdown-heading">
+      <div class="section-inner">
+        <div class="section-header">
+          <h2 id="countdown-heading" class="section-title">Global Countdown</h2>
+          <p class="section-sub">To the worldwide theatrical premiere — Jun 4, 2026</p>
+        </div>
+
+        <div class="global-countdown" aria-live="polite" aria-label="Global countdown timer">
+          <div class="countdown-card global-card">
+            <div class="countdown-card-glow" aria-hidden="true"></div>
+            <div class="countdown-inner">
+              <div class="countdown-unit">
+                <span class="count-num" id="g-days">00</span>
+                <span class="count-label">Days</span>
+              </div>
+              <div class="countdown-sep" aria-hidden="true">:</div>
+              <div class="countdown-unit">
+                <span class="count-num" id="g-hours">00</span>
+                <span class="count-label">Hours</span>
+              </div>
+              <div class="countdown-sep" aria-hidden="true">:</div>
+              <div class="countdown-unit">
+                <span class="count-num" id="g-minutes">00</span>
+                <span class="count-label">Minutes</span>
+              </div>
+              <div class="countdown-sep" aria-hidden="true">:</div>
+              <div class="countdown-unit">
+                <span class="count-num" id="g-seconds">00</span>
+                <span class="count-label">Seconds</span>
+              </div>
+            </div>
+            <div class="global-card-footer">
+              <span class="global-status" id="global-status-text">Until First Showings Worldwide</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="progress-wrap">
+          <div class="progress-label">
+            <span>Announcement</span>
+            <span id="progress-pct">0%</span>
+            <span>Premiere</span>
+          </div>
+          <div class="progress-bar-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="hype-progress">
+            <div class="progress-bar-fill" id="progress-fill"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-characters" id="characters" aria-labelledby="characters-heading">
+      <div class="section-inner">
+        <div class="section-header">
+          <h2 id="characters-heading" class="section-title">Meet The Cast</h2>
+          <p class="section-sub">The digital residents of the circus — trapped, terrified, and somehow still funny</p>
+        </div>
+        <div class="characters-grid" role="list">
+          <article class="char-card" role="listitem" data-char="pomni" tabindex="0">
+            <div class="char-img-wrap">
+              <img src="images/Pomni.webp"
+                   alt="Pomni — The Jester" loading="lazy" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22><rect fill=%22%23ff6fef%22 width=%22200%22 height=%22200%22 rx=%2220%22/><text y=%22120%22 x=%2250%22 font-size=%2280%22>🎪</text></svg>'" />
+            </div>
+            <div class="char-info">
+              <h3 class="char-name">Pomni</h3>
+              <span class="char-role">The Jester</span>
+              <p class="char-desc">Newly arrived and already spiraling, Pomni just wants to find an exit — any exit.</p>
+              <div class="char-color-bar" style="--char-color: #ff6fef"></div>
+            </div>
+          </article>
+          <article class="char-card" role="listitem" data-char="jax" tabindex="0">
+            <div class="char-img-wrap">
+              <img src="images/Jax.webp"
+                   alt="Jax — The Rabbit" loading="lazy" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22><rect fill=%22%23c06bff%22 width=%22200%22 height=%22200%22 rx=%2220%22/><text y=%22120%22 x=%2250%22 font-size=%2280%22>🐇</text></svg>'" />
+            </div>
+            <div class="char-info">
+              <h3 class="char-name">Jax</h3>
+              <span class="char-role">The Rabbit</span>
+              <p class="char-desc">Chaotic, self-serving, and surprisingly complex. Jax hides his trauma behind cruelty.</p>
+              <div class="char-color-bar" style="--char-color: #c06bff"></div>
+            </div>
+          </article>
+          <article class="char-card" role="listitem" data-char="ragatha" tabindex="0">
+            <div class="char-img-wrap">
+              <img src="images/Ragatha.webp"
+                   alt="Ragatha — The Rag Doll" loading="lazy" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22><rect fill=%22%23ff8f6b%22 width=%22200%22 height=%22200%22 rx=%2220%22/><text y=%22120%22 x=%2250%22 font-size=%2280%22>🧸</text></svg>'" />
+            </div>
+            <div class="char-info">
+              <h3 class="char-name">Ragatha</h3>
+              <span class="char-role">The Rag Doll</span>
+              <p class="char-desc">Optimistic to a fault, Ragatha keeps the group together through sheer warmth.</p>
+              <div class="char-color-bar" style="--char-color: #ff8f6b"></div>
+            </div>
+          </article>
+          <article class="char-card" role="listitem" data-char="caine" tabindex="0">
+            <div class="char-img-wrap">
+              <img src="images/Caine.webp"
+                   alt="Caine — The Ringmaster" loading="lazy" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22><rect fill=%22%2300e5ff%22 width=%22200%22 height=%22200%22 rx=%2220%22/><text y=%22120%22 x=%2250%22 font-size=%2280%22>🎩</text></svg>'" />
+            </div>
+            <div class="char-info">
+              <h3 class="char-name">Caine</h3>
+              <span class="char-role">The Ringmaster</span>
+              <p class="char-desc">The AI host of the Digital Circus. Cheerful, omnipotent, and hiding something.</p>
+              <div class="char-color-bar" style="--char-color: #00e5ff"></div>
+            </div>
+          </article>
+          <article class="char-card" role="listitem" data-char="kinger" tabindex="0">
+            <div class="char-img-wrap">
+              <img src="images/Kinger.webp"
+                   alt="Kinger — The Chess King" loading="lazy" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22><rect fill=%22%23ffd700%22 width=%22200%22 height=%22200%22 rx=%2220%22/><text y=%22120%22 x=%2250%22 font-size=%2280%22>♟️</text></svg>'" />
+            </div>
+            <div class="char-info">
+              <h3 class="char-name">Kinger</h3>
+              <span class="char-role">The Chess King</span>
+              <p class="char-desc">The longest-trapped resident — anxiety and paranoia define what's left of him.</p>
+              <div class="char-color-bar" style="--char-color: #ffd700"></div>
+            </div>
+          </article>
+          <article class="char-card" role="listitem" data-char="zooble" tabindex="0">
+            <div class="char-img-wrap">
+              <img src="images/Zooble.webp"
+                   alt="Zooble — The Toy Hybrid" loading="lazy" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22><rect fill=%22%2300ff9f%22 width=%22200%22 height=%22200%22 rx=%2220%22/><text y=%22120%22 x=%2250%22 font-size=%2280%22>🎲</text></svg>'" />
+            </div>
+            <div class="char-info">
+              <h3 class="char-name">Zooble</h3>
+              <span class="char-role">The Toy Hybrid</span>
+              <p class="char-desc">An amalgam of toy parts, Zooble just wants everyone to leave them alone.</p>
+              <div class="char-color-bar" style="--char-color: #00ff9f"></div>
+            </div>
+          </article>
+          <article class="char-card" role="listitem" data-char="gangle" tabindex="0">
+            <div class="char-img-wrap">
+              <img src="images/Gangle.webp"
+                   alt="Gangle — The Ribbon Doll" loading="lazy" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22><rect fill=%22%23ff3e6c%22 width=%22200%22 height=%22200%22 rx=%2220%22/><text y=%22120%22 x=%2250%22 font-size=%2280%22>🎀</text></svg>'" />
+            </div>
+            <div class="char-info">
+              <h3 class="char-name">Gangle</h3>
+              <span class="char-role">The Ribbon Doll</span>
+              <p class="char-desc">Emotionally fragile, Gangle expresses herself through comedy and tragedy masks.</p>
+              <div class="char-color-bar" style="--char-color: #ff3e6c"></div>
+            </div>
+          </article>
+          <article class="char-card" role="listitem" data-char="bubble" tabindex="0">
+            <div class="char-img-wrap">
+              <div class="bubble-placeholder" aria-hidden="true">🫧</div>
+              <img src="images/Bubble.webp"
+                   alt="Bubble — The Floating Sphere" loading="lazy" onerror="this.style.display='none'" />
+            </div>
+            <div class="char-info">
+              <h3 class="char-name">Bubble</h3>
+              <span class="char-role">The Floating Sphere</span>
+              <p class="char-desc">Caine's bubbly assistant. Cheerful, mostly unintelligible, and oddly wise.</p>
+              <div class="char-color-bar" style="--char-color: #a0f4ff"></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-releases" id="releases" aria-labelledby="releases-heading">
+      <div class="section-inner">
+        <div class="section-header">
+          <h2 id="releases-heading" class="section-title">Worldwide Release Tracker</h2>
+          <p class="section-sub">Real theatrical dates — powered by Glitch Productions &amp; Fathom Entertainment</p>
+        </div>
+
+        <div class="release-controls" role="search">
+          <div class="search-wrap">
+            <label for="country-search" class="sr-only">Search countries</label>
+            <input type="search" id="country-search" class="search-input" placeholder="🔍  Search countries or cities..." aria-label="Search countries and cities" />
+          </div>
+          <div class="filter-wrap" role="group" aria-label="Filter releases">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="showing">Now Showing</button>
+            <button class="filter-btn" data-filter="upcoming">Upcoming</button>
+          </div>
+          <div class="sort-wrap">
+            <label for="sort-select" class="sr-only">Sort releases</label>
+            <select id="sort-select" class="sort-select" aria-label="Sort releases">
+              <option value="date">Sort by Date</option>
+              <option value="alpha">A–Z</option>
+              <option value="region">By Region</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="region-tabs" role="tablist" aria-label="World regions">
+          <button class="region-tab active" role="tab" aria-selected="true" data-region="all">All Regions</button>
+          <button class="region-tab" role="tab" aria-selected="false" data-region="north-america">North America</button>
+          <button class="region-tab" role="tab" aria-selected="false" data-region="south-america">South America</button>
+          <button class="region-tab" role="tab" aria-selected="false" data-region="central-america">Central &amp; Caribbean</button>
+          <button class="region-tab" role="tab" aria-selected="false" data-region="europe">Europe</button>
+          <button class="region-tab" role="tab" aria-selected="false" data-region="oceania">Oceania</button>
+          <button class="region-tab" role="tab" aria-selected="false" data-region="africa">Africa</button>
+          <button class="region-tab" role="tab" aria-selected="false" data-region="asia">Asia</button>
+        </div>
+
+        <div id="releases-grid" class="releases-grid" aria-label="Release countdown cards">
+        </div>
+
+        <p class="releases-note">⚠️ Some dates and showtimes are estimates based on regional distributor patterns. Check your local cinema for exact showtimes. Cards labeled "Estimated" are not officially confirmed.</p>
+      </div>
+    </section>
+
+    <section class="section-gallery" id="gallery" aria-labelledby="gallery-heading">
+      <div class="section-inner">
+        <div class="section-header">
+          <h2 id="gallery-heading" class="section-title">Gallery</h2>
+          <p class="section-sub">The world of the Digital Circus</p>
+        </div>
+        <div class="gallery-grid" role="list">
+          <figure class="gallery-item gallery-item-wide" role="listitem">
+            <div class="gallery-img-wrap">
+              <img src="images/tent.png"
+                   alt="The Amazing Digital Circus — main cast in the tent" loading="lazy" onerror="this.closest('.gallery-img-wrap').innerHTML='<div class=gallery-placeholder>🎪</div>'" />
+            </div>
+            <figcaption>The Digital Circus Tent</figcaption>
+          </figure>
+          <figure class="gallery-item" role="listitem">
+            <div class="gallery-img-wrap">
+              <img src="images/Pomni.webp"
+                   alt="Pomni portrait" loading="lazy" onerror="this.closest('.gallery-img-wrap').innerHTML='<div class=gallery-placeholder style=background:#ff6fef>🤡</div>'" />
+            </div>
+            <figcaption>Pomni — The New Arrival</figcaption>
+          </figure>
+          <figure class="gallery-item" role="listitem">
+            <div class="gallery-img-wrap">
+              <img src="images/Jax.webp"
+                   alt="Jax portrait" loading="lazy" onerror="this.closest('.gallery-img-wrap').innerHTML='<div class=gallery-placeholder style=background:#c06bff>🐇</div>'" />
+            </div>
+            <figcaption>Jax — The Trickster</figcaption>
+          </figure>
+          <figure class="gallery-item" role="listitem">
+            <div class="gallery-img-wrap">
+              <img src="images/Caine.webp"
+                   alt="Caine portrait" loading="lazy" onerror="this.closest('.gallery-img-wrap').innerHTML='<div class=gallery-placeholder style=background:#00e5ff>🎩</div>'" />
+            </div>
+            <figcaption>Caine — The Ringmaster</figcaption>
+          </figure>
+          <figure class="gallery-item" role="listitem">
+            <div class="gallery-img-wrap">
+              <img src="images/Ragatha.webp"
+                   alt="Ragatha portrait" loading="lazy" onerror="this.closest('.gallery-img-wrap').innerHTML='<div class=gallery-placeholder style=background:#ff8f6b>🧸</div>'" />
+            </div>
+            <figcaption>Ragatha — The Optimist</figcaption>
+          </figure>
+          <figure class="gallery-item gallery-item-wide" role="listitem">
+            <div class="gallery-img-wrap">
+              <img src="images/Kinger.webp"
+                   alt="Kinger portrait" loading="lazy" onerror="this.closest('.gallery-img-wrap').innerHTML='<div class=gallery-placeholder style=background:#ffd700>♟️</div>'" />
+            </div>
+            <figcaption>Kinger — The Longest Resident</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-faq" id="faq" aria-labelledby="faq-heading">
+      <div class="section-inner">
+        <div class="section-header">
+          <h2 id="faq-heading" class="section-title">Frequently Asked Questions</h2>
+          <p class="section-sub">Everything you need to know about The Last Act</p>
+        </div>
+        <div class="faq-list" role="list">
+          <div class="faq-item" role="listitem">
+            <button class="faq-q" aria-expanded="false">What is The Amazing Digital Circus: The Last Act?</button>
+            <div class="faq-a" hidden>
+              <p>The Last Act is the series finale of The Amazing Digital Circus, a hit indie animated web series created by Gooseworx and produced by Glitch Productions. It combines Episode 8 with the all-new, hour-long Episode 9 — the grand conclusion to the entire story — presented as a feature-length theatrical event before its YouTube and Netflix debut.</p>
+            </div>
+          </div>
+          <div class="faq-item" role="listitem">
+            <button class="faq-q" aria-expanded="false">When is the theatrical release?</button>
+            <div class="faq-a" hidden>
+              <p>The theatrical event runs from June 4–18, 2026 across select countries worldwide. The US run is June 4–7 (with some markets extending to June 18). The standalone episode releases on YouTube and Netflix on June 19, 2026.</p>
+            </div>
+          </div>
+          <div class="faq-item" role="listitem">
+            <button class="faq-q" aria-expanded="false">Where can I buy tickets in the United States?</button>
+            <div class="faq-a" hidden>
+              <p>US tickets are sold through Fathom Entertainment at <a href="https://www.fathomentertainment.com/releases/the-amazing-digital-circus/" target="_blank" rel="noopener noreferrer">fathomentertainment.com</a>. The event is showing at 2,000+ theaters nationwide. Tickets also available on Fandango.</p>
+            </div>
+          </div>
+          <div class="faq-item" role="listitem">
+            <button class="faq-q" aria-expanded="false">What countries is it showing in?</button>
+            <div class="faq-a" hidden>
+              <p>Over 40 countries are confirmed including the United States, Canada, Mexico, Brazil, Argentina, Chile, Colombia, Peru, the UK, Australia, New Zealand, South Africa, and many more across Central America, the Caribbean, Europe, and Asia. Check the release tracker above or visit digitalcircus.movie for a full country list.</p>
+            </div>
+          </div>
+          <div class="faq-item" role="listitem">
+            <button class="faq-q" aria-expanded="false">Do I need to have seen all previous episodes?</button>
+            <div class="faq-a" hidden>
+              <p>The Last Act includes Episode 8 as a recap lead-in, so some newcomers may be able to follow along. However, for the full emotional payoff of the finale, watching all eight previous episodes (available free on YouTube) is strongly recommended.</p>
+            </div>
+          </div>
+          <div class="faq-item" role="listitem">
+            <button class="faq-q" aria-expanded="false">Will there be special content only in theaters?</button>
+            <div class="faq-a" hidden>
+              <p>Yes! Canadian screenings have been confirmed to include a special intro animation with hints about Episode 9 and a series recap by one of the characters. Other regions may include similar bonuses. Check with your local cinema for details.</p>
+            </div>
+          </div>
+          <div class="faq-item" role="listitem">
+            <button class="faq-q" aria-expanded="false">How long is The Last Act?</button>
+            <div class="faq-a" hidden>
+              <p>The theatrical event is approximately 1 hour and 35 minutes long, combining the previously released Episode 8 with the brand-new, hour-long Episode 9 finale.</p>
+            </div>
+          </div>
+          <div class="faq-item" role="listitem">
+            <button class="faq-q" aria-expanded="false">What if my country isn't listed?</button>
+            <div class="faq-a" hidden>
+              <p>Glitch Productions CEO Kevin Lerdwichagul has encouraged fans in unlisted countries to politely contact their local theaters and push for a screening. The team is actively expanding the release. Check <a href="https://www.digitalcircus.movie/" target="_blank" rel="noopener noreferrer">digitalcircus.movie</a> for the latest country additions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">TADC: The Last Act</span>
+        <p class="footer-tagline">One final adventure. On a bigger screen.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="https://www.youtube.com/@GlitchProductions" target="_blank" rel="noopener noreferrer">YouTube</a>
+        <a href="https://www.fathomentertainment.com/releases/the-amazing-digital-circus/" target="_blank" rel="noopener noreferrer">Fathom Events</a>
+        <a href="https://www.digitalcircus.movie/" target="_blank" rel="noopener noreferrer">Official Site</a>
+        <a href="https://tadc.fandom.com/wiki/The_Last_Act" target="_blank" rel="noopener noreferrer">Wiki</a>
+      </nav>
+      <p class="footer-disclaimer">This is an unofficial fan countdown site. All characters, names, and show content are property of Glitch Productions and their respective creators. Release data sourced from Fathom Entertainment, official announcements, and digitalcircus.movie.</p>
+      <p class="footer-copy">&copy; 2026 TADC Fan Countdown. Fan-made. Not affiliated with Glitch Productions.</p>
+    </div>
+  </footer>
+
+  <button id="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
+
+  <script src="main.js"></script>
+</body>
+</html>
